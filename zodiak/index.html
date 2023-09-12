@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Zodiak</title>
+</head>
+<body>
+        <div>
+            <h1 id="zodiak">zodiak</h1>
+        <input type="number" id="tanggal" placeholder="tanggal">
+        <input type="number" id="bulan" placeholder="bulan">
+        <button onclick="zodiak()">zodiak</button>
+        </div>
+        <script>
+            function zodiak(){
+            let tanggal=document.getElementById('tanggal').value;
+            let bulan=document.getElementById('bulan').value;
+            let zodiak="invalid";
+
+        if(bulan==1){
+        if(tanggal>0 && tanggal<20){
+            zodiak="Leo";
+        }
+        if(tanggal>19 && tanggal<32){
+            zodiak="Cancer";
+        }
+        }
+
+        if(bulan==2){
+            if(tanggal>0 && tanggal<20){
+                zodiak="Virgo";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="Libra";
+            }
+        }
+        if(bulan==3){
+            if(tanggal>0 && tanggal<20){
+                zodiak="Scorpio";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="Sagittarius";
+            }
+        }
+        if(bulan==4){
+            if(tanggal>0 && tanggal<20){
+                zodiak="Gemini";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="Taurus";
+            }
+        }
+        if(bulan==5){
+            if(tanggal>0 && tanggal<20){
+                zodiak="Aries";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="Pisces";
+            }
+        }
+        if(bulan==6){
+            if(tanggal>0 && tanggal<20){
+                zodiak="Aquarius";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="Capricorn";
+            }
+        }
+        document.getElementById('zodiak').innerHTML=zodiak;
+        }
+        </script>
+</body>
+</html>
